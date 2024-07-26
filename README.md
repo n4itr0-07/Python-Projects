@@ -14,7 +14,10 @@ A basic student management system created using Python. This system allows you t
 A Python-based file management system that helps organize and manage your files. It includes functionalities like moving, copying, and deleting files.
 
 ### 4. [Instagram Automation](./Project%204)
-Description of the fourth project goes here. Update this section with relevant details once the project is added.
+A Python script to automate Instagram activities such as logging in, following/unfollowing users, liking posts, and posting comments. This project demonstrates how to use Selenium for web automation.
+
+### 5. [Typing Speed Calculator](./Project%205)
+A typing speed calculator built using Python. This project allows users to measure their typing speed by calculating words per minute (WPM) and accuracy.
 
 ## Getting Started
 
@@ -69,8 +72,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Salik Seraj - [salikserajnaik@gmail.com] - [https://www.linkedin.com/in/salik-seraj-naik]
 
 Project Link: [https://github.com/Salik-Seraj/Python-Projects](https://github.com/Salik-Seraj/Python-Projects)
-
----
 
 
 ---
