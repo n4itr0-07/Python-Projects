@@ -19,6 +19,9 @@ A Python script to automate Instagram activities such as logging in, following/u
 ### 5. [Typing Speed Calculator](./Project%205)
 A typing speed calculator built using Python. This project allows users to measure their typing speed by calculating words per minute (WPM) and accuracy.
 
+### 6. [Random Password Generator](./Project%206)
+A simple password generator that asks the user if they want to generate a password. If the user agrees, it generates a random password based on the specified length.
+
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps.
