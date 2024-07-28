@@ -22,6 +22,14 @@ A typing speed calculator built using Python. This project allows users to measu
 ### 6. [Random Password Generator](./Project%206)
 A simple password generator that asks the user if they want to generate a password. If the user agrees, it generates a random password based on the specified length.
 
+### 7. [Site Connectivity Checker](./Project%207)
+Checks the connectivity status of specified websites.If you got 200 responses then website is online
+
+
+### 8. [Weather App Using Python Tkinter and OpenWeather API](./Project%208)
+A GUI-based weather application that fetches weather data for a specified location.Using Python Tkinter and OpenWeather API. You can check the weather data for any location but remember it's not 100% accurate.
+
+
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps.
