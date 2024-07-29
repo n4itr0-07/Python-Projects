@@ -29,6 +29,9 @@ Checks the connectivity status of specified websites.If you got 200 responses th
 ### 8. [Weather App Using Python Tkinter and OpenWeather API](./Project%208)
 A GUI-based weather application that fetches weather data for a specified location.Using Python Tkinter and OpenWeather API. You can check the weather data for any location but remember it's not 100% accurate.
 
+### 9. [Shareit File Transfer App](./Project%209)
+This project is a simple file transfer application built using Python and Tkinter. It allows users to send and receive files over a local network with an intuitive graphical interface. The application demonstrates basic socket programming and GUI development.
+
 
 ## Getting Started
 
