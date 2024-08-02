@@ -1,8 +1,24 @@
 from customtkinter import *
 from PIL import Image
-from tkinter import ttk
+from tkinter import ttk,messagebox
+import database
 
-# Main Window
+
+#Functions
+
+def add_employee():
+    if idEntry.get() == "" or phoneEntry.get() == "" or nameEntry.get() == "" or salaryEntry.get():
+        messagebox.showerror("Error", "Please enter all fields.")
+
+    else:
+        database.insert(idEntry.get(),phoneEntry.get(), nameEntry.get(),roleBox.get(),genderBox.get(),salaryEntry.get(),salaryEntry)
+
+
+
+
+
+
+
 window = CTk()
 window.geometry("930x580")
 window.resizable(False, False)
@@ -127,16 +143,12 @@ buttonFrame = CTkFrame(window, fg_color="#161C30")
 buttonFrame.grid(row=2, column=0, columnspan=2, pady=10)
 
 # New Button
-newButton = CTkButton(buttonFrame, text="New Employee", font=("arial", 15, "bold"), width=160, corner_radius=15)
+newButton = CTkButton(buttonFrame, text="New Employee", font=("arial", 15, "bold"), width=160, corner_radius=15,command=add_employee)
 newButton.grid(row=0, column=0, pady=5)
 
 # Add Button
-addButton = CTkButton(buttonFrame, text="Add Employee", font=("arial", 15, "bold"), width=160, corner_radius=15)
-addButton.grid(row=0, column=1, pady=5, padx=5)
-
-# Update Employee Button
-updateButton = CTkButton(buttonFrame, text="Update Employee", font=("arial", 15, "bold"), width=160, corner_radius=15)
-updateButton.grid(row=0, column=2, pady=5, padx=5)
+addButton = CTkButton(buttonFrame, text="Add Employee", font=("arial", 15, "bold"), width=160, corner_radius=15,)
+addButton.grid(row=0, column=2, pady=5, padx=5)
 
 # Delete Employee Button
 deleteButton = CTkButton(buttonFrame, text="Delete Employee", font=("arial", 15, "bold"), width=160, corner_radius=15)
@@ -149,5 +161,14 @@ deleteallButton.grid(row=0, column=4, pady=5, padx=5)
 # Adjusting the window grid to ensure proper resizing
 window.grid_rowconfigure(1, weight=1)
 window.grid_columnconfigure(1, weight=1)
+
+
+
+
+
+
+
+
+
 
 window.mainloop()
