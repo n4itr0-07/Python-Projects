@@ -1,23 +1,65 @@
 from customtkinter import *
 from PIL import Image
-from tkinter import ttk,messagebox
+from tkinter import ttk, messagebox
 import database
 
+# Functions
 
-#Functions
+def selection(event):
+    selected_item = tree.selection()
+    if selected_item:
+        row = tree.item(selected_item)["values"]
+        clear()
+        idEntry.insert(0, row[0])
+        nameEntry.insert(0, row[1])
+        phoneEntry.insert(0, row[2])
+        roleBox.set(row[3])
+        genderBox.set(row[4])
+        salaryEntry.insert(0, row[5])
+
+
+    
+
+
+
+
+def clear ():
+    idEntry.delete(0, END)
+    nameEntry.delete(0, END)
+    phoneEntry.delete(0, END)
+    roleBox.set("Penetration Tester")
+    genderBox.set("Male")
+    salaryEntry.delete(0, END)
+
+
+def treeview_data():
+    employees = database.fetch_employees()
+    tree.delete(*tree.get_children())  # Clear the treeview before adding new data
+    for employee in employees:
+        tree.insert('', END, values=employee)
 
 def add_employee():
-    if idEntry.get() == "" or phoneEntry.get() == "" or nameEntry.get() == "" or salaryEntry.get():
+    if idEntry.get() == "" or phoneEntry.get() == "" or nameEntry.get() == "" or salaryEntry.get() == "":
         messagebox.showerror("Error", "Please enter all fields.")
-
     else:
-        database.insert(idEntry.get(),phoneEntry.get(), nameEntry.get(),roleBox.get(),genderBox.get(),salaryEntry.get(),salaryEntry)
+        database.insert(idEntry.get(), nameEntry.get(), phoneEntry.get(), roleBox.get(), genderBox.get(), salaryEntry.get())
+        clear()
+        treeview_data()  # Refresh the treeview
+        messagebox.showinfo("Success", "Data saved successfully")
 
+def update_employee():
+    # Placeholder function for updating employee details
+    pass
 
+def delete_employee():
+    selected_item = tree.selection()[0]
+    tree.delete(selected_item)
+    # Implement database deletion logic here
 
-
-
-
+def delete_all_employees():
+    for item in tree.get_children():
+        tree.delete(item)
+    # Implement database deletion logic here
 
 window = CTk()
 window.geometry("930x580")
@@ -59,7 +101,8 @@ phoneEntry.grid(row=2, column=1)
 roleLabel = CTkLabel(leftFrame, text="Role", font=("arial", 18, "bold"), text_color="white")
 roleLabel.grid(row=3, column=0, padx=20, pady=10, sticky="w")
 
-role_options = ["Security Architect", "Penetration Tester", "Web Developer", "Cloud Architect", "Technical Writer", "Network Engineer", "DevOps Engineer", "Data Scientist", "Business Analyst", "IT Consultant", "UX/UI Designer"]
+role_options = ["Security Architect", "Penetration Tester", "Web Developer", "Cloud Architect", "Technical Writer", 
+                "Network Engineer", "DevOps Engineer", "Data Scientist", "Business Analyst", "IT Consultant", "UX/UI Designer"]
 
 roleBox = CTkComboBox(leftFrame, values=role_options, width=180, font=("Arial", 15, "bold"), state="readonly")
 roleBox.grid(row=3, column=1)
@@ -132,6 +175,7 @@ tree.column("Salary", width=100)
 # Treeview Style
 style = ttk.Style()
 style.configure("Treeview.Heading", font=("arial", 14, "bold"))
+style.configure("Treeview", font=("arial",15,"bold"),rowheight=30,background="#161c30",foreground="white")
 
 # Scrollbar
 scrollbar = ttk.Scrollbar(rightFrame, orient=VERTICAL, command=tree.yview)
@@ -143,32 +187,34 @@ buttonFrame = CTkFrame(window, fg_color="#161C30")
 buttonFrame.grid(row=2, column=0, columnspan=2, pady=10)
 
 # New Button
-newButton = CTkButton(buttonFrame, text="New Employee", font=("arial", 15, "bold"), width=160, corner_radius=15,command=add_employee)
-newButton.grid(row=0, column=0, pady=5)
+newButton = CTkButton(buttonFrame, text="New Employee", font=("arial", 15, "bold"), width=160, corner_radius=15)
+newButton.grid(row=0, column=0, pady=5, padx=10)
 
 # Add Button
-addButton = CTkButton(buttonFrame, text="Add Employee", font=("arial", 15, "bold"), width=160, corner_radius=15,)
-addButton.grid(row=0, column=2, pady=5, padx=5)
+addButton = CTkButton(buttonFrame, text="Add Employee", font=("arial", 15, "bold"), width=160, corner_radius=15, command=add_employee)
+addButton.grid(row=0, column=1, pady=5, padx=10)
+
+# Update Employee Button
+updateButton = CTkButton(buttonFrame, text="Update Employee", font=("arial", 15, "bold"), width=160, corner_radius=15, command=update_employee)
+updateButton.grid(row=0, column=2, pady=5, padx=10)
 
 # Delete Employee Button
-deleteButton = CTkButton(buttonFrame, text="Delete Employee", font=("arial", 15, "bold"), width=160, corner_radius=15)
-deleteButton.grid(row=0, column=3, pady=5, padx=5)
+deleteButton = CTkButton(buttonFrame, text="Delete Employee", font=("arial", 15, "bold"), width=160, corner_radius=15, command=delete_employee)
+deleteButton.grid(row=0, column=3, pady=5, padx=10)
 
 # Delete All Employee Button
-deleteallButton = CTkButton(buttonFrame, text="Delete All", font=("arial", 15, "bold"), width=160, corner_radius=15)
-deleteallButton.grid(row=0, column=4, pady=5, padx=5)
+deleteallButton = CTkButton(buttonFrame, text="Delete All", font=("arial", 15, "bold"), width=160, corner_radius=15, command=delete_all_employees)
+deleteallButton.grid(row=0, column=4, pady=5, padx=10)
 
 # Adjusting the window grid to ensure proper resizing
 window.grid_rowconfigure(1, weight=1)
 window.grid_columnconfigure(1, weight=1)
 
+# Initializing the data in the Treeview
 
 
+treeview_data()
 
-
-
-
-
-
+window.bind("<ButtonRelease>",selection)
 
 window.mainloop()
