@@ -4,6 +4,59 @@ from tkinter import ttk, messagebox
 import database
 
 # Functions
+# def update_employee():
+#     # Placeholder function for updating employee details
+#     selected_item = tree.selection()
+#     if not selected_item:
+#         messagebox.showerror("Error", "No employee selected.")
+
+#     else:
+#         database.update(idEntry.get(),nameEntry.get(),phoneEntry.get(),roleBox.get(),genderBox.get(),salaryEntry.get())
+#         treeview_data()
+#         clear()
+#         messagebox.showinfo("Success","Data is updated successfully")
+def update_employee():
+    # Placeholder function for updating employee details
+    selected_item = tree.selection()
+    if not selected_item:
+        messagebox.showerror("Error", "No employee selected.")
+    else:
+        try:
+            # Debugging: Print selected item
+            print(f"Selected item: {selected_item}")
+
+            # Assuming 'idEntry' contains the ID of the selected employee
+            id_value = idEntry.get()
+            name_value = nameEntry.get()
+            phone_value = phoneEntry.get()
+            role_value = roleBox.get()
+            gender_value = genderBox.get()
+            salary_value = salaryEntry.get()
+
+            # Debugging: Print retrieved values
+            print(f"Updating ID: {id_value}")
+            print(f"Name: {name_value}, Phone: {phone_value}, Role: {role_value}, Gender: {gender_value}, Salary: {salary_value}")
+
+            # Update the database
+            database.update(id_value, name_value, phone_value, role_value, gender_value, salary_value)
+            
+            # Refresh the tree view with updated data
+            treeview_data()
+
+            # Clear the entry fields
+            clear()
+
+            # Show success message
+            messagebox.showinfo("Success", "Data is updated successfully")
+
+        except Exception as e:
+            # Debugging: Print the exception
+            print(f"Error occurred: {e}")
+            messagebox.showerror("Error", f"An error occurred: {e}")
+
+# Make sure to define the `treeview_data` and `clear` functions as well
+
+
 
 def selection(event):
     selected_item = tree.selection()
@@ -16,11 +69,6 @@ def selection(event):
         roleBox.set(row[3])
         genderBox.set(row[4])
         salaryEntry.insert(0, row[5])
-
-
-    
-
-
 
 
 def clear ():
@@ -37,6 +85,18 @@ def treeview_data():
     tree.delete(*tree.get_children())  # Clear the treeview before adding new data
     for employee in employees:
         tree.insert('', END, values=employee)
+# def treeview_data():
+#     # Clear the current data
+#     for item in tree.get_children():
+#         tree.delete(item)
+#     # Fetch updated data from the database
+#     mycourser.execute("SELECT * FROM data")
+#     rows = mycourser.fetchall()
+#     # Insert updated data into the tree view
+#     for row in rows:
+#         tree.insert("", "end", values=row)
+
+
 
 def add_employee():
     if idEntry.get() == "" or phoneEntry.get() == "" or nameEntry.get() == "" or salaryEntry.get() == "":
@@ -47,9 +107,6 @@ def add_employee():
         treeview_data()  # Refresh the treeview
         messagebox.showinfo("Success", "Data saved successfully")
 
-def update_employee():
-    # Placeholder function for updating employee details
-    pass
 
 def delete_employee():
     selected_item = tree.selection()[0]
@@ -175,7 +232,7 @@ tree.column("Salary", width=100)
 # Treeview Style
 style = ttk.Style()
 style.configure("Treeview.Heading", font=("arial", 14, "bold"))
-style.configure("Treeview", font=("arial",15,"bold"),rowheight=30,background="#161c30",foreground="white")
+style.configure("Treeview", font=("arial",13,"bold"),rowheight=50,background="#161c30",foreground="white")
 
 # Scrollbar
 scrollbar = ttk.Scrollbar(rightFrame, orient=VERTICAL, command=tree.yview)

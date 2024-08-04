@@ -103,8 +103,9 @@ def Receive():
     main.mainloop()
 
 # TODO: icon
-image_icon = PhotoImage(file="C:/Code With Ssn/Learning Python/Python-Projects/Project 9/Image/icon.png")
-root.iconphoto(False, image_icon)
+image_icon1 = PhotoImage(file="C:/Code With Ssn/Learning Python/Python-Projects/Project 9/Image/icon1.png")
+
+root.iconphoto(False, image_icon1) 
 
 Label(root, text="File Transfer", font=("Acumin Variable Concept", 20, "bold"), bg="#f4fdfe").place(x=20, y=30)
 

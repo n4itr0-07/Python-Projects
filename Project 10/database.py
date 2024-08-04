@@ -62,30 +62,39 @@ def fetch_employees():
     finally:
         conn.close()
 
-def delete_employee(id):
-    conn = connect_database()
-    if conn is None:
-        return
+def update(id, new_name, new_phone, new_role, new_gender, new_salary):
+    mycourser.execute(
+        "UPDATE dat SET name=%s, phone=%s, role=%s, gender=%s, salary=%s WHERE id=%s",
+        (new_name, new_phone, new_role, new_gender, new_salary, id)
+    )
+    conn.commit()
 
-    try:
-        mycourser = conn.cursor()
-        mycourser.execute("DELETE FROM data WHERE id=%s", (id,))
-        conn.commit()
-    except Exception as e:
-        messagebox.showerror("Error", f"Failed to delete data: {e}")
-    finally:
-        conn.close()
 
-def delete_all_employees():
-    conn = connect_database()
-    if conn is None:
-        return
 
-    try:
-        mycourser = conn.cursor()
-        mycourser.execute("DELETE FROM data")
-        conn.commit()
-    except Exception as e:
-        messagebox.showerror("Error", f"Failed to delete data: {e}")
-    finally:
-        conn.close()
+# def delete_employee(id):
+#     conn = connect_database()
+#     if conn is None:
+#         return
+
+#     try:
+#         mycourser = conn.cursor()
+#         mycourser.execute("DELETE FROM data WHERE id=%s", (id,))
+#         conn.commit()
+#     except Exception as e:
+#         messagebox.showerror("Error", f"Failed to delete data: {e}")
+#     finally:
+#         conn.close()
+
+# def delete_all_employees():
+#     conn = connect_database()
+#     if conn is None:
+#         return
+
+#     try:
+#         mycourser = conn.cursor()
+#         mycourser.execute("DELETE FROM data")
+#         conn.commit()
+#     except Exception as e:
+#         messagebox.showerror("Error", f"Failed to delete data: {e}")
+#     finally:
+#         conn.close()
