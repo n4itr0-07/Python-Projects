@@ -9,6 +9,9 @@ Welcome to the **Rock, Paper, Scissors** game! This simple command-line game all
 - Fun visual design using emojis.
 - Easy to use and understand.
 
+![rps](https://github.com/user-attachments/assets/f2d46b98-3d8c-4143-a94d-a7e20eb909ba)
+
+
 ## Getting Started
 
 Follow these steps to get the game up and running on your local machine.
