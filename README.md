@@ -45,7 +45,7 @@ Make sure you have Python installed on your system. You can download it from [he
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Salik-Seraj/Python-Projects.git
+   git clone https://github.com/n4itr0-07/Python-Projects
    ```
 2. Navigate to the project directory
    ```sh
@@ -80,7 +80,7 @@ Contributions are what make the open source community such an amazing place to l
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-Project Link: [https://github.com/Salik-Seraj/Python-Projects](https://github.com/Salik-Seraj/Python-Projects)
+Project Link: [here](https://github.com/n4itr0-07/Python-Projects)
 
 
 ---
