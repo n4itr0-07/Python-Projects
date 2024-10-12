@@ -80,11 +80,6 @@ Contributions are what make the open source community such an amazing place to l
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-
-Salik Seraj - [salikserajnaik@gmail.com] - [https://www.linkedin.com/in/salik-seraj-naik]
-
 Project Link: [https://github.com/Salik-Seraj/Python-Projects](https://github.com/Salik-Seraj/Python-Projects)
 
 
