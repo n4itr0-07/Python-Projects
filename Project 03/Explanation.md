@@ -166,12 +166,3 @@ python file_management.py
 
 That's it! You've successfully created and run a simple file management application in Python.
 
-
-## Follow Me
-
-If you found this guide helpful, follow me for more tutorials and projects on GitHub and other social media platforms!
-
-- [GitHub](https://github.com/Salik-Seraj)
-- [X](https://twitter.com/code_with_ssn)
-- [LinkedIn](https://linkedin.com/in/salik-seraj-naik)
-- [Personal Website](https://linktr.ee/SalikSerajNaik)
