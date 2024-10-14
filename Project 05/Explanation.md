@@ -103,12 +103,4 @@ if __name__ == "__main__":
 3. Type the displayed paragraph as accurately and quickly as possible.
 4. View your typing speed and accuracy results.
 5. Repeat or exit as desired.
-
-## Follow Me
-
-If you found this guide helpful, follow me for more tutorials and projects on GitHub and other social media platforms!
-
-- [GitHub](https://github.com/Salik-Seraj)
-- [X](https://twitter.com/code_with_ssn)
-- [LinkedIn](https://linkedin.com/in/salik-seraj-naik)
-- [Personal Website](https://linktr.ee/SalikSerajNaik)
+---
