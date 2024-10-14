@@ -107,11 +107,3 @@ Call the `task` function to start the app.
 task()
 ```
 
-## Follow Me
-
-If you found this guide helpful, follow me for more tutorials and projects on GitHub and other social media platforms!
-
-- [GitHub](https://github.com/Salik-Seraj)
-- [X](https://twitter.com/code_with_ssn)
-- [LinkedIn](https://linkedin.com/in/salik-seraj-naik)
-- [Personal Website](https://linktr.ee/SalikSerajNaik)
