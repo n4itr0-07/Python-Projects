@@ -186,12 +186,3 @@ python student_grades_management.py
 ```
 
 That's it! You now have a functional Student Grades Management System. Feel free to modify and expand the code to add more features as needed.
-
-## Follow Me
-
-If you found this guide helpful, follow me for more tutorials and projects on GitHub and other social media platforms!
-
-- [GitHub](https://github.com/Salik-Seraj)
-- [X](https://twitter.com/code_with_ssn)
-- [LinkedIn](https://linkedin.com/in/salik-seraj-naik)
-- [Personal Website](https://linktr.ee/SalikSerajNaik)
