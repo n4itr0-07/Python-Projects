@@ -12,7 +12,9 @@ A simple Python-based multithreaded port scanner that scans all ports (1-65535) 
 
 
 ## Overview
-This project is a lightweight port scanner built with Python. It utilizes threading to scan multiple ports concurrently, significantly speeding up the scanning process.
+This project is a lightweight port scanner built with Python. It utilizes threading to scan multiple ports concurrently, significantly speeding up the scanning process.  
+
+![image](https://github.com/user-attachments/assets/f106db0a-13ca-4ea5-ba59-7bc2c15257b0)
 
 ## Features
 - Scans all TCP ports (1-65535)
