@@ -32,6 +32,7 @@ A GUI-based weather application that fetches weather data for a specified locati
 ### 9. [Shareit File Transfer App](./Project%209)
 This project is a simple file transfer application built using Python and Tkinter. It allows users to send and receive files over a local network with an intuitive graphical interface. The application demonstrates basic socket programming and GUI development.
 
+### 10. [Port Scanner Using Python](./Project%2017)
 
 ## Getting Started
 
