@@ -33,6 +33,7 @@ A GUI-based weather application that fetches weather data for a specified locati
 This project is a simple file transfer application built using Python and Tkinter. It allows users to send and receive files over a local network with an intuitive graphical interface. The application demonstrates basic socket programming and GUI development.
 
 ### 10. [Port Scanner Using Python](./Project%2017)
+A simple Python-based multithreaded port scanner that scans all ports (1-65535) on a given target. This tool is helpful for testing network security and checking open ports.  
 
 ## Getting Started
 
