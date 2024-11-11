@@ -51,21 +51,21 @@ bot.login(username="coffin___xp", password="2jd*(VMCX@i^2_(")
 
 ```python
 # Follow a user
-bot.follow("salik_seraj_naik")
+bot.follow("modi")
 ```
 
 ### 6. Upload a Photo with a Caption
 
 ```python
 # Upload a photo with a caption
-bot.upload_photo("C:/Users/Salik/OneDrive/Pictures/Screenshots/Saved Pictures/wallpaper.jpg", caption="We are Anonymous")
+bot.upload_photo("C:/Users/naitro/OneDrive/Pictures/Screenshots/Saved Pictures/wallpaper.jpg", caption="We are Anonymous")
 ```
 
 ### 7. Get User ID
 
 ```python
 # Get user ID
-user_id = bot.get_user_id_from_username("salik_seraj_naik")
+user_id = bot.get_user_id_from_username("modi")
 ```
 
 ### 8. Get Last 3 Posts of the User
@@ -94,7 +94,7 @@ bot.comment(user_posts[0], "Nice post!")
 
 ```python
 # Send a direct message
-bot.send_message("Hello! This is a bot message.", ["salik_seraj_naik"])
+bot.send_message("Hello! This is a bot message.", ["modi"])
 ```
 
 ### 12. Complete the Bot Actions
@@ -121,13 +121,13 @@ if os.path.exists("config"):
 bot.login(username="coffin___xp", password="2jd*(VMCX@i^2_(")
 
 # Follow a user
-bot.follow("salik_seraj_naik")
+bot.follow("modi")
 
 # Upload a photo with a caption
-bot.upload_photo("C:/Users/Salik/OneDrive/Pictures/Screenshots/Saved Pictures/wallpaper.jpg", caption="We are Anonymous")
+bot.upload_photo("C:/Users/naitro/OneDrive/Pictures/Screenshots/Saved Pictures/wallpaper.jpg", caption="We are Anonymous")
 
 # Get user ID
-user_id = bot.get_user_id_from_username("salik_seraj_naik")
+user_id = bot.get_user_id_from_username("modi")
 
 # Get last 3 posts of the user
 user_posts = bot.get_user_medias(user_id, filtration=False)[:3]
@@ -140,7 +140,7 @@ for post in user_posts:
 bot.comment(user_posts[0], "Nice post!")
 
 # Send a direct message
-bot.send_message("Hello! This is a bot message.", ["salik_seraj_naik"])
+bot.send_message("Hello! This is a bot message.", ["modi"])
 
 print("Bot actions completed!")
 ```
