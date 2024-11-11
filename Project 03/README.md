@@ -7,7 +7,7 @@ This guide provides a step-by-step walkthrough for creating a simple file manage
 First, clone the repository to your local machine. Replace `your-repo-link` with your actual repository link.
 
 ```bash
-git clone https://github.com/Salik-Seraj/Python-Projects.git
+git clone https://github.com/n4itr0-07/Python-Projects.git
 
 cd your-repo-directory
 ```
